@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39171af4b36c540abce362e2c29c2e, type: 3}
+  m_Name: Dialogue 8
+  m_EditorClassIdentifier: 
+  text: "B\u0335\u035D\u032FU\u0336\u0350\u033AT\u0334\u0308\u0325 T\u0338\u0303\u032BH\u0338\u0310\u035AE\u0334\u035D\u031C
+    V\u0335\u0310\u031EO\u0334\u0311\u0320I\u0338\u0346\u0327D\u0338\r\nS\u0334\u030E\u0324T\u0335\u0305\u0329A\u0337\u030D\u032DR\u0336\u034B\u0348E\u0338\u0344\u0353S\u0336\u0306\u0322
+    B\u0337\u030A\u032EA\u0338\u0344\u0333C\u0338\u0305\u0345K\u0338\u0309\u034D"
+  previousDialogue: {fileID: 11400000, guid: 7790ff60db0dea8469c35cde43ff90f8, type: 2}
+  nextDialogue: {fileID: 11400000, guid: a0147608fc9b6cd4594e7cc97338951a, type: 2}

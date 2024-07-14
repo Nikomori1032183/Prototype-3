@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39171af4b36c540abce362e2c29c2e, type: 3}
+  m_Name: Dialogue 9
+  m_EditorClassIdentifier: 
+  text: 'WHY ARE YOU ALL LOOKING AT ME?
+
+    DONT THINK YOU CAN JUDGE ME.
+
+    WHY
+    IS THIS HAPPENING TO ME?'
+  previousDialogue: {fileID: 11400000, guid: e534747a19900704a8e215cde7c00090, type: 2}
+  nextDialogue: {fileID: 11400000, guid: 4e65fd250a1394d44a3827af4dc0720c, type: 2}

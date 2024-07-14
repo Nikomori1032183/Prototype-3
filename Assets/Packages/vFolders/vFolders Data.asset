@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb9c12a8c6c949f7af83a3d238359d0, type: 3}
+  m_Name: vFolders Data
+  m_EditorClassIdentifier: 
+  folderDatasByGuid:
+    keys:
+    - 00000000000000001000000000000000
+    - 8a8107b5a26689049b2a5c966fd6d857
+    - cec435a4e839f584b86df5945323f247
+    - 23a04f4375e8a4f4aa0188ee200e5a50
+    - f54d1bd14bd3ca042bd867b519fee8cc
+    - ec686c83341052c4aa3a24530ed3b6eb
+    - 4a853969e207afe43883ae1e4521bd69
+    - 2b42eece93c9aa34187a56417198d30a
+    - 6aebf3ee67c152e41beed43c52f94ff5
+    - ba3adc2807474874da21ba4693916c1e
+    - b4750bd3ac250f744b520b46b4d66dd1
+    - 673646a0107074b459170cdb8cde711e
+    - a217cc6365ec13c4996496cf3ee8e4aa
+    - 03091a01bb199bb44b836d3749785a96
+    - 18524bb105bb2024c8be2061a8fb9d20
+    values:
+    - guid: 00000000000000001000000000000000
+      iColor: 0
+      autoIcon: cs Script Icon
+      customIcon: 
+      autoIconDirty: 0
+    - guid: 8a8107b5a26689049b2a5c966fd6d857
+      iColor: 0
+      autoIcon: 
+      customIcon: 
+      autoIconDirty: 0
+    - guid: cec435a4e839f584b86df5945323f247
+      iColor: 0
+      autoIcon: 
+      customIcon: 
+      autoIconDirty: 0
+    - guid: 23a04f4375e8a4f4aa0188ee200e5a50
+      iColor: 0
+      autoIcon: SceneAsset Icon
+      customIcon: 
+      autoIconDirty: 0
+    - guid: f54d1bd14bd3ca042bd867b519fee8cc
+      iColor: 0
+      autoIcon: 
+      customIcon: 
+      autoIconDirty: 0
+    - guid: ec686c83341052c4aa3a24530ed3b6eb
+      iColor: 0
+      autoIcon: cs Script Icon
+      customIcon: 
+      autoIconDirty: 0
+    - guid: 4a853969e207afe43883ae1e4521bd69
+      iColor: 6
+      autoIcon: 
+      customIcon: Font Icon
+      autoIconDirty: 0
+    - guid: 2b42eece93c9aa34187a56417198d30a
+      iColor: 3
+      autoIcon: 
+      customIcon: 
+      autoIconDirty: 0
+    - guid: 6aebf3ee67c152e41beed43c52f94ff5
+      iColor: 3
+      autoIcon: 
+      customIcon: 
+      autoIconDirty: 0
+    - guid: ba3adc2807474874da21ba4693916c1e
+      iColor: 3
+      autoIcon: 
+      customIcon: RawImage Icon
+      autoIconDirty: 0
+    - guid: b4750bd3ac250f744b520b46b4d66dd1
+      iColor: 3
+      autoIcon: 
+      customIcon: Font Icon
+      autoIconDirty: 0
+    - guid: 673646a0107074b459170cdb8cde711e
+      iColor: 3
+      autoIcon: 
+      customIcon: Font Icon
+      autoIconDirty: 0
+    - guid: a217cc6365ec13c4996496cf3ee8e4aa
+      iColor: 3
+      autoIcon: 
+      customIcon: 
+      autoIconDirty: 0
+    - guid: 03091a01bb199bb44b836d3749785a96
+      iColor: 7
+      autoIcon: 
+      customIcon: 
+      autoIconDirty: 0
+    - guid: 18524bb105bb2024c8be2061a8fb9d20
+      iColor: 7
+      autoIcon: 
+      customIcon: 
+      autoIconDirty: 0
