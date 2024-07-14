@@ -5,18 +5,19 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using VInspector;
 
-public class UITextbox : DebugToggleComponent
+public class UITextbox : UIImage
 {
-    UIText textUI;
+    public UIText textUI;
 
     [Tab("Textbox")]
     [SerializeField] Dialogue dialogue;
     [SerializeField] bool scroll = true;
-    [SerializeField] float scrollInterval = 0.05f;
+    public float scrollInterval = 0.05f;
     [EndTab]
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         textUI = GetComponentInChildren<UIText>();
         UpdateText();
     }

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa39171af4b36c540abce362e2c29c2e, type: 3}
   m_Name: Dialogue 10
   m_EditorClassIdentifier: 
-  text: 'I open my eyes and see the roof of my bedroom
+  text: 'I open my eyes and see the roof of my bedroom.
 
-    my body is drenched in
-    sweat'
+    My body is drenched
+    in sweat.'
   previousDialogue: {fileID: 11400000, guid: a0147608fc9b6cd4594e7cc97338951a, type: 2}
   nextDialogue: {fileID: 0}

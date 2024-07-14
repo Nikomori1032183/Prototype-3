@@ -7,7 +7,7 @@ using VInspector;
 [RequireComponent(typeof(Image))]
 public class UIImage : UIElement
 {
-    protected Image image;
+    public Image image;
 
     protected virtual void Start()
     {

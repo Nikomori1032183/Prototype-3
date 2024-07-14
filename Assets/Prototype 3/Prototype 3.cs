@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
+using VInspector;
 
 public class Prototype3 : MonoBehaviour
 {
@@ -14,8 +16,15 @@ public class Prototype3 : MonoBehaviour
     [SerializeField] AudioClip eyeDrone;
     [SerializeField] AudioClip wrongButtonPress;
 
+    [SerializeField] UITextbox textbox;
     [SerializeField] UITextButton button;
     [SerializeField] UIChoice choice;
+    [SerializeField] Image background;
+    [SerializeField] List<GameObject> eyes;
+
+    [SerializeField] Color backgroundTint;
+    [SerializeField] Color textboxTint;
+    [SerializeField] Color textTint;
 
     private void Awake()
     {
@@ -27,8 +36,6 @@ public class Prototype3 : MonoBehaviour
         AudioSource[] audioSources = GetComponents<AudioSource>();
         musicSource = audioSources[0];
         sfxSource = audioSources[1];
-
-        choice.gameObject.SetActive(false);
     }
 
     public void PlayAudio(AudioSource source, AudioClip clip)
@@ -55,11 +62,26 @@ public class Prototype3 : MonoBehaviour
                 break;
             case "Dialogue 4":
                 button.Hide();
-
                 break;
             case "Dialogue 5":
-                button.Hide();
+                choice.gameObject.SetActive(false);
                 PlayAudio(musicSource, panicAttack);
+                Tint();
+                break;
+            case "Dialogue 6":
+
+                break;
+            case "Dialogue 7":
+
+                break;
+            case "Dialogue 8":
+
+                break;
+            case "Dialogue 9":
+
+                break;
+            case "Dialogue 10":
+
                 break;
             default:
                 break;
@@ -82,6 +104,24 @@ public class Prototype3 : MonoBehaviour
             case "Dialogue 4":
                 choice.gameObject.SetActive(true);
                 break;
+            case "Dialogue 5":
+                choice.gameObject.SetActive(true);
+                break;
+            case "Dialogue 6":
+                
+                break;
+            case "Dialogue 7":
+                
+                break;
+            case "Dialogue 8":
+                
+                break;
+            case "Dialogue 9":
+                
+                break;
+            case "Dialogue 10":
+
+                break;
             default:
                 break;
         }
@@ -89,23 +129,44 @@ public class Prototype3 : MonoBehaviour
 
     public void SetScrollInterval(float interval)
     {
-        // change textbox scroll speed
+        textbox.scrollInterval = interval;
     }
 
     public void SetFontSize(int size)
     {
-        // change textbox font size
+        textbox.textUI.textComponent.fontSize = size;
     }
 
-    public void RedTint()
+    public void Tint()
     {
-        // tint background and choice buttons
+        background.color = backgroundTint;
+        textbox.image.color = textboxTint;
+        textbox.textUI.textComponent.color = textTint;
     }
 
+    [Button]
     public void StartEyes()
     {
-        // get every object with eye component in scene
-        // make them visible
+        StartCoroutine(DisplayEyes());
+    }
+
+    public IEnumerator DisplayEyes()
+    {
+        foreach (GameObject eye in eyes)
+        {
+            yield return new WaitForSeconds(0.5f);
+
+            eye.SetActive(true);
+        }
+    }
+
+    [Button]
+    public void StopEyes()
+    {
+        foreach (GameObject eye in eyes)
+        {
+            eye.SetActive(false);
+        }
     }
 
     public void UnavailableOption()
