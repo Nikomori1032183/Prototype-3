@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa39171af4b36c540abce362e2c29c2e, type: 3}
-  m_Name: Dialogue 10
+  m_Name: Dialogue 11
   m_EditorClassIdentifier: 
-  text: WHY IS THIS HAPPENING TO ME?
-  previousDialogue: {fileID: 11400000, guid: a0147608fc9b6cd4594e7cc97338951a, type: 2}
-  nextDialogue: {fileID: 11400000, guid: a409b37a75ee46d48ae8b1aa942127d3, type: 2}
+  text: 'I open my eyes and see the roof of my bedroom.
+
+    My body is drenched
+    in sweat.'
+  previousDialogue: {fileID: 11400000, guid: 4e65fd250a1394d44a3827af4dc0720c, type: 2}
+  nextDialogue: {fileID: 0}

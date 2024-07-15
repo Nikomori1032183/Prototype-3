@@ -26,6 +26,8 @@ public class Prototype3 : MonoBehaviour
     [SerializeField] Color textboxTint;
     [SerializeField] Color textTint;
 
+    Color[] originalColors = new Color[3];
+
     private void Awake()
     {
         current = this;
@@ -36,6 +38,11 @@ public class Prototype3 : MonoBehaviour
         AudioSource[] audioSources = GetComponents<AudioSource>();
         musicSource = audioSources[0];
         sfxSource = audioSources[1];
+    }
+
+    private void StopAudio(AudioSource source)
+    {
+        source.Stop();
     }
 
     public void PlayAudio(AudioSource source, AudioClip clip)
@@ -49,7 +56,7 @@ public class Prototype3 : MonoBehaviour
     {
         switch (dialogue.name)
         {
-            case "Dialogue 1":
+            case "Dialogue 1": // Start
                 button.Hide();
                 break;
             case "Dialogue 2":
@@ -62,26 +69,43 @@ public class Prototype3 : MonoBehaviour
                 break;
             case "Dialogue 4":
                 button.Hide();
+                SetScrollInterval(0.1f);
                 break;
-            case "Dialogue 5":
+            case "Dialogue 5": // Panic
                 choice.gameObject.SetActive(false);
+                SetScrollInterval(0.03f);
                 PlayAudio(musicSource, panicAttack);
                 Tint();
+                UITextButton option1 = (UITextButton)choice.buttons[0];
+                option1.SetText("Calm Down");
+                UITextButton option2 = (UITextButton)choice.buttons[1];
+                option2.SetText("PANIC");
                 break;
             case "Dialogue 6":
-
+                choice.gameObject.SetActive(false);
                 break;
             case "Dialogue 7":
-
+                choice.gameObject.SetActive(false);
+                SetScrollInterval(0.05f);
                 break;
             case "Dialogue 8":
-
+                choice.gameObject.SetActive(false); // Eyes
+                PlayAudio(musicSource, eyeDrone);
+                SetFontSize(64);
+                SetScrollInterval(0.02f);
+                StartEyes();
                 break;
             case "Dialogue 9":
-
+                choice.gameObject.SetActive(false);
+                SetFontSize(32);
+                SetScrollInterval(0.03f);
                 break;
             case "Dialogue 10":
-
+                choice.gameObject.SetActive(false);
+                break;
+            case "Dialogue 11": // End
+                StopEyes();
+                UndoTint();
                 break;
             default:
                 break;
@@ -108,18 +132,21 @@ public class Prototype3 : MonoBehaviour
                 choice.gameObject.SetActive(true);
                 break;
             case "Dialogue 6":
-                
+                choice.gameObject.SetActive(true);
                 break;
             case "Dialogue 7":
-                
+                choice.gameObject.SetActive(true);
                 break;
             case "Dialogue 8":
-                
+                choice.gameObject.SetActive(true);
                 break;
             case "Dialogue 9":
-                
+                choice.gameObject.SetActive(true);
                 break;
             case "Dialogue 10":
+                choice.gameObject.SetActive(true);
+                break;
+            case "Dialogue 11":
 
                 break;
             default:
@@ -139,9 +166,20 @@ public class Prototype3 : MonoBehaviour
 
     public void Tint()
     {
+        originalColors[0] = background.color;
+        originalColors[1] = textbox.image.color;
+        originalColors[2] = textbox.textUI.textComponent.color;
+
         background.color = backgroundTint;
         textbox.image.color = textboxTint;
         textbox.textUI.textComponent.color = textTint;
+    }
+
+    private void UndoTint()
+    {
+        background.color = originalColors[0];
+        textbox.image.color = originalColors[1];
+        textbox.textUI.textComponent.color = originalColors[2];
     }
 
     [Button]

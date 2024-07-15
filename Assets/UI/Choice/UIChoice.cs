@@ -8,7 +8,7 @@ public class UIChoice : DebugToggleComponent
 {
     [Tab("UIChoice")]
     LayoutGroup layoutGroup;
-    List<UIButton> buttons = new List<UIButton>();
+    public List<UIButton> buttons = new List<UIButton>();
 
     [SerializeField] bool destroy = false;
 

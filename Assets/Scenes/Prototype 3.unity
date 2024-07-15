@@ -1107,7 +1107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5055138735618626037, guid: 0f56e2d2c3633754fac304c6ca72749a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -81.25
+      value: -60.5
       objectReference: {fileID: 0}
     - target: {fileID: 5055138735618626037, guid: 0f56e2d2c3633754fac304c6ca72749a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1554,7 +1554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panicAttack: {fileID: 8300000, guid: 5024e194c399bdf429ce098662c50939, type: 3}
-  eyeDrone: {fileID: 8300000, guid: 230a5d21e2595a742a776c390e7a1dc1, type: 3}
+  eyeDrone: {fileID: 8300000, guid: cd386b9e6357cf649a6cb9ca1b82b81e, type: 3}
   wrongButtonPress: {fileID: 8300000, guid: 807c6b8eb5571794687de267bf2c2044, type: 3}
   textbox: {fileID: 1572798178}
   button: {fileID: 759963201}
@@ -1571,7 +1571,9 @@ MonoBehaviour:
   - {fileID: 423120539}
   - {fileID: 95659523}
   - {fileID: 1613299299}
-  tint: {r: 0.7924528, g: 0.10840159, b: 0.10840159, a: 1}
+  backgroundTint: {r: 1, g: 0.50628924, b: 0.50628924, a: 1}
+  textboxTint: {r: 0.64779866, g: 0.26278618, b: 0.26278618, a: 1}
+  textTint: {r: 0.9245283, g: 0.3750444, b: 0.3750444, a: 1}
 --- !u!82 &900386843
 AudioSource:
   m_ObjectHideFlags: 0

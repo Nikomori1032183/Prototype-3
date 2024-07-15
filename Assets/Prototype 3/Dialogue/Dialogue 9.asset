@@ -14,9 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: 'WHY ARE YOU ALL LOOKING AT ME?
 
-    DONT THINK YOU CAN JUDGE ME.
-
-    WHY
-    IS THIS HAPPENING TO ME?'
+    DONT THINK YOU CAN JUDGE ME.'
   previousDialogue: {fileID: 11400000, guid: e534747a19900704a8e215cde7c00090, type: 2}
   nextDialogue: {fileID: 11400000, guid: 4e65fd250a1394d44a3827af4dc0720c, type: 2}
