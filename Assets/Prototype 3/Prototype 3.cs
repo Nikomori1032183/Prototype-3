@@ -104,6 +104,7 @@ public class Prototype3 : MonoBehaviour
                 choice.gameObject.SetActive(false);
                 break;
             case "Dialogue 11": // End
+                choice.gameObject.SetActive(false);
                 StopEyes();
                 UndoTint();
                 break;
@@ -147,11 +148,17 @@ public class Prototype3 : MonoBehaviour
                 choice.gameObject.SetActive(true);
                 break;
             case "Dialogue 11":
-
+                StartCoroutine(Close());
                 break;
             default:
                 break;
         }
+    }
+
+    private IEnumerator Close()
+    {
+        yield return new WaitForSeconds(3);
+        Application.Quit();
     }
 
     public void SetScrollInterval(float interval)
