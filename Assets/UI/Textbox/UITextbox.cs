@@ -19,6 +19,7 @@ public class UITextbox : UIImage
     {
         base.Start();
         textUI = GetComponentInChildren<UIText>();
+        UIButton.onPickDialogue += LoadDialogue;
         UpdateText();
     }
 
@@ -49,6 +50,16 @@ public class UITextbox : UIImage
         }
 
         Prototype3.current.DialogueEnd(dialogue);
+    }
+
+    [Button]
+    public void LoadDialogue(Dialogue dialogue)
+    {
+        if (dialogue != null)
+        {
+            this.dialogue = dialogue;
+            UpdateText();
+        }
     }
 
     [Button]

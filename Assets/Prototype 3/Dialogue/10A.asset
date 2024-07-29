@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39171af4b36c540abce362e2c29c2e, type: 3}
+  m_Name: 10A
+  m_EditorClassIdentifier: 
+  text: "\u0104\u0334\u0301\u0308\u035CN\u0338\u0353\u0320\u034A\u030AD\u0338\u0316\u0349\u0308\u0306
+    T\u0338\u032B\u0303H\u0338\u035A\u0310E\u0334\u031C\u035D V\u0335\u031E\u0310\u020E\u0334\u0320I\u0338\u0327\u0346D\u0338\nS\u0334\u0324\u030ET\u0335\u0329\u0305A\u0337\u032D\u030DR\u0336\u0348\u034B\xCB\u0338\u0353\u0301S\u0336\u0322\u0306
+    B\u0337\u032E\u030A\xC4\u0338\u0333\u0301C\u0338\u0305\u0345K\u0338\u034D\u0309."
+  previousDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 7a70f97220cc6e54fa3e9c1b618fa84c, type: 2}
+  choice: {fileID: 5207633582972196922, guid: f33076df9b112ca42a8e8e8d87cbc634, type: 3}

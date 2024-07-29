@@ -14,7 +14,15 @@ public class UIButton : UIImage, IPointerDownHandler, IPointerUpHandler, IPointe
     [SerializeField] private Sprite pressedSprite;
     [SerializeField] private PointerEventData.InputButton mouseButton;
     [SerializeField] private UnityEvent buttonPress;
+    [SerializeField] Dialogue dialogue;
     [EndTab]
+
+    public static event Action<Dialogue> onPickDialogue;
+
+    public void PickDialogue()
+    {
+        onPickDialogue(dialogue);
+    }
 
     protected override void Start()
     {

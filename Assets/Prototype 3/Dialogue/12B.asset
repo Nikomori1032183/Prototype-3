@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39171af4b36c540abce362e2c29c2e, type: 3}
+  m_Name: 12B
+  m_EditorClassIdentifier: 
+  text: 'They refuse to look away.
+
+    I just have to get away somehow?'
+  previousDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 54488963e55b89244b19e830a9fc8a52, type: 2}
+  choice: {fileID: 5207633582972196922, guid: b08f4a060e827f944b1e235758f91ea0, type: 3}

@@ -12,6 +12,8 @@ public class Prototype3 : MonoBehaviour
     private AudioSource musicSource;
     private AudioSource sfxSource;
 
+    private UIChoice currentChoice;
+
     [SerializeField] AudioClip panicAttack;
     [SerializeField] AudioClip eyeDrone;
     [SerializeField] AudioClip wrongButtonPress;
@@ -38,6 +40,7 @@ public class Prototype3 : MonoBehaviour
         AudioSource[] audioSources = GetComponents<AudioSource>();
         musicSource = audioSources[0];
         sfxSource = audioSources[1];
+        UIButton.onPickDialogue += DialogueStart;
     }
 
     private void StopAudio(AudioSource source)
@@ -52,107 +55,113 @@ public class Prototype3 : MonoBehaviour
         source.Play();
     }
 
+    // show dialogue
+    // 
+
     public void DialogueStart(Dialogue dialogue)
     {
-        switch (dialogue.name)
-        {
-            case "Dialogue 1": // Start
-                button.Hide();
-                break;
-            case "Dialogue 2":
-                button.Hide();
-                button.SetText("Explore");
-                break;
-            case "Dialogue 3":
-                button.Hide();
-                button.SetText("Walk");
-                break;
-            case "Dialogue 4":
-                button.Hide();
-                SetScrollInterval(0.1f);
-                break;
-            case "Dialogue 5": // Panic
-                choice.gameObject.SetActive(false);
-                SetScrollInterval(0.03f);
-                PlayAudio(musicSource, panicAttack);
-                Tint();
-                UITextButton option1 = (UITextButton)choice.buttons[0];
-                option1.SetText("Calm Down");
-                UITextButton option2 = (UITextButton)choice.buttons[1];
-                option2.SetText("PANIC");
-                break;
-            case "Dialogue 6":
-                choice.gameObject.SetActive(false);
-                break;
-            case "Dialogue 7":
-                choice.gameObject.SetActive(false);
-                SetScrollInterval(0.05f);
-                break;
-            case "Dialogue 8":
-                choice.gameObject.SetActive(false); // Eyes
-                PlayAudio(musicSource, eyeDrone);
-                SetFontSize(64);
-                SetScrollInterval(0.02f);
-                StartEyes();
-                break;
-            case "Dialogue 9":
-                choice.gameObject.SetActive(false);
-                SetFontSize(32);
-                SetScrollInterval(0.03f);
-                break;
-            case "Dialogue 10":
-                choice.gameObject.SetActive(false);
-                break;
-            case "Dialogue 11": // End
-                choice.gameObject.SetActive(false);
-                StopEyes();
-                UndoTint();
-                break;
-            default:
-                break;
-        }
+        Destroy(currentChoice);
+        //switch (dialogue.name)
+        //{
+        //    case "Dialogue 1": // Start
+        //        button.Hide();
+        //        break;
+        //    case "Dialogue 2":
+        //        button.Hide();
+        //        button.SetText("Explore");
+        //        break;
+        //    case "Dialogue 3":
+        //        button.Hide();
+        //        button.SetText("Walk");
+        //        break;
+        //    case "Dialogue 4":
+        //        button.Hide();
+        //        SetScrollInterval(0.1f);
+        //        break;
+        //    case "Dialogue 5": // Panic
+        //        choice.gameObject.SetActive(false);
+        //        SetScrollInterval(0.03f);
+        //        PlayAudio(musicSource, panicAttack);
+        //        Tint();
+        //        UITextButton option1 = (UITextButton)choice.buttons[0];
+        //        option1.SetText("Calm Down");
+        //        UITextButton option2 = (UITextButton)choice.buttons[1];
+        //        option2.SetText("PANIC");
+        //        break;
+        //    case "Dialogue 6":
+        //        choice.gameObject.SetActive(false);
+        //        break;
+        //    case "Dialogue 7":
+        //        choice.gameObject.SetActive(false);
+        //        SetScrollInterval(0.05f);
+        //        break;
+        //    case "Dialogue 8":
+        //        choice.gameObject.SetActive(false); // Eyes
+        //        PlayAudio(musicSource, eyeDrone);
+        //        SetFontSize(64);
+        //        SetScrollInterval(0.02f);
+        //        StartEyes();
+        //        break;
+        //    case "Dialogue 9":
+        //        choice.gameObject.SetActive(false);
+        //        SetFontSize(32);
+        //        SetScrollInterval(0.03f);
+        //        break;
+        //    case "Dialogue 10":
+        //        choice.gameObject.SetActive(false);
+        //        break;
+        //    case "Dialogue 11": // End
+        //        choice.gameObject.SetActive(false);
+        //        StopEyes();
+        //        UndoTint();
+        //        break;
+        //    default:
+        //        break;
+        //}
     }
 
     public void DialogueEnd(Dialogue dialogue)
     {
-        switch (dialogue.name)
-        {
-            case "Dialogue 1":
-                button.Display();
-                break;
-            case "Dialogue 2":
-                button.Display();
-                break;
-            case "Dialogue 3":
-                button.Display();
-                break;
-            case "Dialogue 4":
-                choice.gameObject.SetActive(true);
-                break;
-            case "Dialogue 5":
-                choice.gameObject.SetActive(true);
-                break;
-            case "Dialogue 6":
-                choice.gameObject.SetActive(true);
-                break;
-            case "Dialogue 7":
-                choice.gameObject.SetActive(true);
-                break;
-            case "Dialogue 8":
-                choice.gameObject.SetActive(true);
-                break;
-            case "Dialogue 9":
-                choice.gameObject.SetActive(true);
-                break;
-            case "Dialogue 10":
-                choice.gameObject.SetActive(true);
-                break;
-            case "Dialogue 11":
-                StartCoroutine(Close());
-                break;
-            default:
-                break;
-        }
+        currentChoice = Instantiate(dialogue.choice, GameObject.FindWithTag("Canvas").transform);
+        
+        //switch (dialogue.name)
+        //{
+        //    case "Dialogue 1":
+        //        button.Display();
+        //        break;
+        //    case "Dialogue 2":
+        //        button.Display();
+        //        break;
+        //    case "Dialogue 3":
+        //        button.Display();
+        //        break;
+        //    case "Dialogue 4":
+        //        choice.gameObject.SetActive(true);
+        //        break;
+        //    case "Dialogue 5":
+        //        choice.gameObject.SetActive(true);
+        //        break;
+        //    case "Dialogue 6":
+        //        choice.gameObject.SetActive(true);
+        //        break;
+        //    case "Dialogue 7":
+        //        choice.gameObject.SetActive(true);
+        //        break;
+        //    case "Dialogue 8":
+        //        choice.gameObject.SetActive(true);
+        //        break;
+        //    case "Dialogue 9":
+        //        choice.gameObject.SetActive(true);
+        //        break;
+        //    case "Dialogue 10":
+        //        choice.gameObject.SetActive(true);
+        //        break;
+        //    case "Dialogue 11":
+        //        StartCoroutine(Close());
+        //        break;
+        //    default:
+        //        break;
+        //}
     }
 
     private IEnumerator Close()

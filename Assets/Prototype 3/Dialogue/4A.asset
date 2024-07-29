@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39171af4b36c540abce362e2c29c2e, type: 3}
+  m_Name: 4A
+  m_EditorClassIdentifier: 
+  text: 'I walk for hours...
+
+    I walk for days...
+
+    I walk for weeks...'
+  previousDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: f4da09ab95f7bdb4eb0776fb76338546, type: 2}
+  choice: {fileID: 5207633582972196922, guid: d8080ed03e0292240ab916134cc48de9, type: 3}

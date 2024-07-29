@@ -59,4 +59,6 @@ public class UITextButton : UIButton, IPointerDownHandler, IPointerUpHandler, IP
 
         textUI.textComponent.enabled = false;
     }
+
+    
 }
