@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,11 @@ using VInspector;
 public class UIChoice : DebugToggleComponent
 {
     [Tab("UIChoice")]
-    LayoutGroup layoutGroup;
     public List<UIButton> buttons = new List<UIButton>();
-
     [SerializeField] bool destroy = false;
+    [EndTab]
+
+    LayoutGroup layoutGroup;
 
     private void Start()
     {
@@ -22,9 +24,17 @@ public class UIChoice : DebugToggleComponent
         }
     }
 
+    public static event Action<string> onChoiceTrigger;
+    public void ChoiceTrigger()
+    {
+        onChoiceTrigger(gameObject.name);
+    }
+
     public void ChoicePicked()
     {
         DebugMessage("Choice Picked");
+
+        onChoiceTrigger(gameObject.name);
 
         if (destroy)
         {

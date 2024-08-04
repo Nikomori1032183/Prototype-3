@@ -15,4 +15,4 @@ MonoBehaviour:
   text: calm to panic
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 0}
-  choice: {fileID: 5207633582972196922, guid: 53d67004a4324ea4c87e2e336ab6d552, type: 3}
+  choice: {fileID: 5207633582972196922, guid: fc78b79bcaf86794e8d29f1c7e90bff1, type: 3}

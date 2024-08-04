@@ -15,4 +15,4 @@ MonoBehaviour:
   text: I stare hopelessly into the void...
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 7162ddc33cef555409623fbe2f72e6bb, type: 2}
-  choice: {fileID: 5207633582972196922, guid: eb73de4ea1d21d540a1dfa2fa179237a, type: 3}
+  choice: {fileID: 5207633582972196922, guid: 304566605d9d2f64498f8aaa6cbe36dd, type: 3}

@@ -17,4 +17,4 @@ MonoBehaviour:
     None of this feels real.'
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 31127c0b911f6f84f991b7f76f58e17e, type: 2}
-  choice: {fileID: 5207633582972196922, guid: 18b3782025039264092f68b10d99f9f8, type: 3}
+  choice: {fileID: 5207633582972196922, guid: ebc3b8748d9d0194082e313f34bfd1ae, type: 3}

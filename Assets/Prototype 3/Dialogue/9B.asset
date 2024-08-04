@@ -16,4 +16,4 @@ MonoBehaviour:
     familiar?
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 149bcc38679717448af519cfcfcb8bfe, type: 2}
-  choice: {fileID: 5207633582972196922, guid: 74453478ba5fb3e4794e8b81d67995ad, type: 3}
+  choice: {fileID: 5207633582972196922, guid: 80a567fcd07fd4b45ac5ff8b0c4eea9e, type: 3}

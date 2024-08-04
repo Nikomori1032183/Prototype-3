@@ -15,4 +15,4 @@ MonoBehaviour:
   text: WHY IS THIS HAPPENING TO ME?
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 54488963e55b89244b19e830a9fc8a52, type: 2}
-  choice: {fileID: 5207633582972196922, guid: 90fb00afddf27824ab221742ad4b6e26, type: 3}
+  choice: {fileID: 5207633582972196922, guid: d537b1ac51ee9c74aa9fc68beed3efb6, type: 3}

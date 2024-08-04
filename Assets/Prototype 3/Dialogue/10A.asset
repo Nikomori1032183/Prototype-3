@@ -17,4 +17,4 @@ MonoBehaviour:
     B\u0337\u032E\u030A\xC4\u0338\u0333\u0301C\u0338\u0305\u0345K\u0338\u034D\u0309."
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 7a70f97220cc6e54fa3e9c1b618fa84c, type: 2}
-  choice: {fileID: 5207633582972196922, guid: f33076df9b112ca42a8e8e8d87cbc634, type: 3}
+  choice: {fileID: 5207633582972196922, guid: 3009206735c991e45bd383df2cbefa60, type: 3}

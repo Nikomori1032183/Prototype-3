@@ -17,4 +17,4 @@ MonoBehaviour:
     DONT THINK YOU CAN JUDGE ME.'
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 1308414f6c40d214eb333eb1c1dbde08, type: 2}
-  choice: {fileID: 5207633582972196922, guid: 3ca5ccc6b0bc4af49948402a05fd43bd, type: 3}
+  choice: {fileID: 5207633582972196922, guid: 0d686fd4ed79fac4fa64f6fbd8b70e21, type: 3}

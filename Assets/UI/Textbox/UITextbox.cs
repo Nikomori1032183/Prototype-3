@@ -10,7 +10,7 @@ public class UITextbox : UIImage
     public UIText textUI;
 
     [Tab("Textbox")]
-    [SerializeField] Dialogue dialogue;
+    public Dialogue currentDialogue;
     [SerializeField] bool scroll = true;
     public float scrollInterval = 0.05f;
     [EndTab]
@@ -27,17 +27,17 @@ public class UITextbox : UIImage
     {
         textUI.textComponent.text = "";
 
-        Prototype3.current.DialogueStart(dialogue);
+        Prototype3.current.DialogueStart(currentDialogue);
 
         if (scroll)
         {
-            StartCoroutine(ScrollingText(dialogue.text));
+            StartCoroutine(ScrollingText(currentDialogue.text));
         }
 
         else
         {
-            textUI.textComponent.text = dialogue.text;
-            Prototype3.current.DialogueEnd(dialogue);
+            textUI.textComponent.text = currentDialogue.text;
+            Prototype3.current.DialogueEnd(currentDialogue);
         }
     }
 
@@ -49,7 +49,7 @@ public class UITextbox : UIImage
             yield return new WaitForSeconds(scrollInterval);
         }
 
-        Prototype3.current.DialogueEnd(dialogue);
+        Prototype3.current.DialogueEnd(currentDialogue);
     }
 
     [Button]
@@ -57,7 +57,7 @@ public class UITextbox : UIImage
     {
         if (dialogue != null)
         {
-            this.dialogue = dialogue;
+            this.currentDialogue = dialogue;
             UpdateText();
         }
     }
@@ -65,9 +65,9 @@ public class UITextbox : UIImage
     [Button]
     public void NextDialogue()
     {
-        if (dialogue.nextDialogue != null)
+        if (currentDialogue.nextDialogue != null)
         {
-            dialogue = dialogue.nextDialogue;
+            currentDialogue = currentDialogue.nextDialogue;
             UpdateText();
         }
     }
@@ -75,9 +75,9 @@ public class UITextbox : UIImage
     [Button]
     public void PreviousDialogue()
     {
-        if (dialogue.previousDialogue != null)
+        if (currentDialogue.previousDialogue != null)
         {
-            dialogue = dialogue.previousDialogue;
+            currentDialogue = currentDialogue.previousDialogue;
             UpdateText();
         }
     }

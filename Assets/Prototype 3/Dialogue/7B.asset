@@ -17,4 +17,4 @@ MonoBehaviour:
     I feel like Ive been here before.'
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 3e1eca29a45024c47bc946f7f24f883a, type: 2}
-  choice: {fileID: 5207633582972196922, guid: ddf1157a8ad03234ea81422bb534147c, type: 3}
+  choice: {fileID: 5207633582972196922, guid: e4fb205be93c6ea43bed6a2c8744bf52, type: 3}

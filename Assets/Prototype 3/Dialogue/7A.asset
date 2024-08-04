@@ -20,4 +20,4 @@ MonoBehaviour:
     kind of punishment?'
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 61ccde50cdbfc4f48a7842d5c5225c35, type: 2}
-  choice: {fileID: 5207633582972196922, guid: eeb348ff9535ba143b9830b9b536230e, type: 3}
+  choice: {fileID: 5207633582972196922, guid: 3fee3debb3e39e04197025fba6d778ad, type: 3}

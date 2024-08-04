@@ -20,4 +20,4 @@ MonoBehaviour:
     know where im going...'
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 8a06c924a6fe8aa49bfa9885ba181d4a, type: 2}
-  choice: {fileID: 5207633582972196922, guid: 19303f80d0aacf545b2307fb61ff434d, type: 3}
+  choice: {fileID: 5207633582972196922, guid: a953dcbe9b2dda34e8dad4d55039607f, type: 3}

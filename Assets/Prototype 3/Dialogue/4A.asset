@@ -19,4 +19,4 @@ MonoBehaviour:
     I walk for weeks...'
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: f4da09ab95f7bdb4eb0776fb76338546, type: 2}
-  choice: {fileID: 5207633582972196922, guid: d8080ed03e0292240ab916134cc48de9, type: 3}
+  choice: {fileID: 5207633582972196922, guid: 85c6e6fcf0c44dc4bbed352dfdb944fd, type: 3}

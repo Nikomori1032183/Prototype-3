@@ -17,4 +17,4 @@ MonoBehaviour:
     My gut feeling tells me to walk in this direction...'
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 2d7e24c42d39ede44bf9ef762f788c79, type: 2}
-  choice: {fileID: 5207633582972196922, guid: 31dc5a30aceff4f44a13a13bc05c88b3, type: 3}
+  choice: {fileID: 5207633582972196922, guid: 7702eb2f7ac7f0e4b829b46a216c4ff2, type: 3}

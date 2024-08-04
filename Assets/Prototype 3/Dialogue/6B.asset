@@ -20,4 +20,4 @@ MonoBehaviour:
     in my head...'
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 73949f83fb47a7b47893a3632378e344, type: 2}
-  choice: {fileID: 5207633582972196922, guid: 938bbc5f40612174e87efa7ba12e628e, type: 3}
+  choice: {fileID: 5207633582972196922, guid: fb1ce4cc5a377eb4ba807d2b44b5af2b, type: 3}

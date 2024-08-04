@@ -20,4 +20,4 @@ MonoBehaviour:
     little knives that stab with every move I make.'
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 4206c808b9b92304d90e0617417e9f49, type: 2}
-  choice: {fileID: 5207633582972196922, guid: 2e15fc4f901dbeb439474133acb5dd16, type: 3}
+  choice: {fileID: 5207633582972196922, guid: 217b8e759ad4b874397fb1c7ed5bfe6d, type: 3}

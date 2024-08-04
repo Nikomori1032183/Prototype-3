@@ -15,4 +15,4 @@ MonoBehaviour:
   text: I decide to start walking in a random direction to look for answers
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 775793a5abd08104484453e7b6261e49, type: 2}
-  choice: {fileID: 5207633582972196922, guid: 8070488579c9e2c479def84a728ebe2c, type: 3}
+  choice: {fileID: 5207633582972196922, guid: 1f9c2432eb1111c4fa9aa9e6d4bc2bd1, type: 3}

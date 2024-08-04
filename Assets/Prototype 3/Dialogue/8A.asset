@@ -19,4 +19,4 @@ MonoBehaviour:
     Am I stuck in this place forever?'
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: d66c353f4af01c94390a035c29150469, type: 2}
-  choice: {fileID: 5207633582972196922, guid: 0386afd6cd6b0c34495a112cafbd2b00, type: 3}
+  choice: {fileID: 5207633582972196922, guid: af0191a9e36ef6e42a2def7d0f943682, type: 3}

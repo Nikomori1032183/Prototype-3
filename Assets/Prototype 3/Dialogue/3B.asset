@@ -17,4 +17,4 @@ MonoBehaviour:
     Nothing but an inky blackness.'
   previousDialogue: {fileID: 11400000, guid: 8dae844223805b94b9a4ea741f5a21c1, type: 2}
   nextDialogue: {fileID: 11400000, guid: 303688c212ee52d41b63beccd974b6f6, type: 2}
-  choice: {fileID: 5207633582972196922, guid: 1478a4327ce043f4e88061008770e86b, type: 3}
+  choice: {fileID: 5207633582972196922, guid: 320c67a08f2bd364da670a9657356b98, type: 3}

@@ -17,4 +17,4 @@ MonoBehaviour:
     I''m so lost... Where am I?!'
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: ca93c3dac0bab034a8e643f097c22057, type: 2}
-  choice: {fileID: 5207633582972196922, guid: aef66dcc186693f4eba46040d9d48555, type: 3}
+  choice: {fileID: 5207633582972196922, guid: d895af932027aba4395a05d0d46dfb03, type: 3}

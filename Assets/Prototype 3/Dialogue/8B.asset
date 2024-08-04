@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa39171af4b36c540abce362e2c29c2e, type: 3}
   m_Name: 8B
   m_EditorClassIdentifier: 
-  text: ... And I'm note alone.
+  text: ... And I'm not alone.
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 04fefd8e69571564887ed53f188cc675, type: 2}
-  choice: {fileID: 5207633582972196922, guid: 21a519fe565fc2042aba6c942b8403f2, type: 3}
+  choice: {fileID: 5207633582972196922, guid: cd5301692b7b31d449b837111d43df56, type: 3}
