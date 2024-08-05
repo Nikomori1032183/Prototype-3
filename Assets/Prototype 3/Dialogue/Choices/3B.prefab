@@ -113,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 824381709321958779, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 128
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 824381709321958779, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: m_SizeDelta.y
@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2291053416323079109, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: m_Text
-      value: NEEDS NAME
+      value: 'Keep Looking '
       objectReference: {fileID: 0}
     - target: {fileID: 2291053416323079109, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: m_Color.b

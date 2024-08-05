@@ -108,7 +108,7 @@ public class Prototype3 : MonoBehaviour
 
             case "9B(Clone)":
                 PlayAudio(musicSource, eyeDrone);
-                SetFontSize(64);
+                SetFontSize(48);
                 SetScrollInterval(0.02f);
                 StartEyes();
                 break;

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa39171af4b36c540abce362e2c29c2e, type: 3}
   m_Name: 7D
   m_EditorClassIdentifier: 
-  text: calm to panic
+  text: 'Ugh, my head, too much going on.
+
+    Got to get out, get them out...'
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 0}
   choice: {fileID: 5207633582972196922, guid: fc78b79bcaf86794e8d29f1c7e90bff1, type: 3}
