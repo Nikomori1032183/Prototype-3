@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -18,6 +19,7 @@ public class UIButton : UIImage, IPointerDownHandler, IPointerUpHandler, IPointe
     [EndTab]
 
     public static event Action<Dialogue> onPickDialogue;
+    public static event Action<string> onButtonClickInfo;
 
     public void PickDialogue()
     {
@@ -33,6 +35,11 @@ public class UIButton : UIImage, IPointerDownHandler, IPointerUpHandler, IPointe
     private void ButtonPress()
     {
         buttonPress.Invoke();
+    }
+
+    public void OnButtonClickInfo(string buttonID)
+    {
+        onButtonClickInfo(buttonID);
     }
 
     private bool CorrectButton(PointerEventData.InputButton button)

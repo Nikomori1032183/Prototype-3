@@ -14,6 +14,8 @@ public class Prototype3 : MonoBehaviour
 
     private UIChoice currentChoice;
 
+    private int answers = 0;
+
     [SerializeField] AudioClip panicAttack;
     [SerializeField] AudioClip eyeDrone;
     [SerializeField] AudioClip wrongButtonPress;
@@ -24,16 +26,25 @@ public class Prototype3 : MonoBehaviour
     [SerializeField] Image background;
     [SerializeField] List<GameObject> eyes;
 
+    [SerializeField] Dialogue goodEnd;
+    [SerializeField] Dialogue badEnd;
+
     [SerializeField] Color backgroundTint;
     [SerializeField] Color textboxTint;
     [SerializeField] Color textTint;
 
     Color[] originalColors = new Color[3];
 
+    private void IncrementAnswers()
+    {
+        answers++;
+    }
+
     private void Awake()
     {
         current = this;
         UIButton.onPickDialogue += DialogueStart;
+        UIButton.onButtonClickInfo += PlayButtonSound;
         UIChoice.onChoiceTrigger += ChoiceTrigger;
     }
 
@@ -46,9 +57,42 @@ public class Prototype3 : MonoBehaviour
         DelayedStartStart();
     }
 
+    private void PlayButtonSound(string buttonID)
+    {
+        switch (buttonID)
+        {
+            case "1":
+                Debug.Log("Wrong Button Press");
+                PlayAudio(sfxSource, wrongButtonPress);
+                break;
+
+            case "2":
+                Debug.Log("Answer Press");
+                // good noise
+                IncrementAnswers();
+                break;
+
+            case "3":
+                Debug.Log("Check Answers - " + answers);
+                if (answers > 2)
+                {
+                    textbox.LoadDialogue(goodEnd);
+                }
+
+                else
+                {
+                    textbox.LoadDialogue(badEnd);
+                }
+                break;
+
+            default:
+                break;
+        }
+    }
+
     public void NextDialogue()
     {
- 
+        
     }
 
     private void StopAudio(AudioSource source)
@@ -65,86 +109,66 @@ public class Prototype3 : MonoBehaviour
 
     public void ChoiceTrigger(string choiceName)
     {
-        switch (choiceName)
-        {
-            case "3A(Clone)":
-                SetScrollInterval(0.07f);
-                break;
-
-            case "4A(Clone)":
-                SetScrollInterval(0.05f);
-                break;
-
-            case "3B(Clone)":
-                SetScrollInterval(0.07f);
-                break;
-
-            case "4B(Clone)":
-                SetScrollInterval(0.05f);
-                break;
-
-            case "6A(Clone)":
-                SetScrollInterval(0.03f);
-                PlayAudio(musicSource, panicAttack);
-                Tint();
-                break;
-
-            case "6B(Clone)":
-                SetScrollInterval(0.03f);
-                PlayAudio(musicSource, panicAttack);
-                Tint();
-                break;
-
-            case "8A(Clone)":
-                SetScrollInterval(0.05f);
-                break;
-
-            case "8B(Clone)":
-                SetScrollInterval(0.05f);
-                break;
-
-            case "9A(Clone)":
-                PlayAudio(musicSource, eyeDrone);
-                SetFontSize(64);
-                SetScrollInterval(0.02f);
-                StartEyes();
-                break;
-
-            case "9B(Clone)":
-                PlayAudio(musicSource, eyeDrone);
-                SetFontSize(48);
-                SetScrollInterval(0.02f);
-                StartEyes();
-                break;
-
-            case "10A(Clone)":
-                SetFontSize(32);
-                SetScrollInterval(0.03f);
-                break;
-
-            case "10B(Clone)":
-                SetFontSize(32);
-                SetScrollInterval(0.03f);
-                break;
-
-            case "12A(Clone)":
-                StopEyes();
-                Close();
-                break;
-
-            case "12B(Clone)":
-                StopEyes();
-                Close();
-                break;
-
-            default:
-                break;
-        }
+        //switch (choiceName)
+        //{
+        //    case "Choice 13(Clone)":
+        //        PlayAudio(sfxSource, wrongButtonPress);
+        //        break;
+        //    case "Choice 14Clone)":
+        //        PlayAudio(sfxSource, wrongButtonPress);
+        //        break;
+        //}
     }
 
     public void DialogueStart(Dialogue dialogue)
     {
+        if (dialogue != null)
+        {
+            switch (dialogue.name)
+            {
+                case "Dialogue 6":
+                    PlayAudio(musicSource, eyeDrone);
+                    eyes[0].SetActive(true);
+                    break;
 
+                case "Dialogue 7":
+                    eyes[1].SetActive(true);
+                    break;
+
+                case "Dialogue 8":
+                    eyes[2].SetActive(true);
+                    break;
+
+                case "Dialogue 10":
+                    eyes[0].SetActive(false);
+                    eyes[1].SetActive(false);
+                    eyes[2].SetActive(false);
+                    StopAudio(musicSource);
+                    break;
+
+                case "Dialogue 13":
+                    Tint();
+                    StartEyes();
+                    PlayAudio(musicSource, panicAttack);
+                    break;
+
+                case "Dialogue 20":
+                    StopEyes();
+                    break;
+
+                case "Dialogue 20B":
+                    UndoTint();
+                    StopEyes();
+                    break;
+                case "Dialogue 21":
+                    UndoTint();
+                    StopAudio(musicSource);
+                    break;
+                case "Dialogue 22":
+                    Close();
+                    break;
+            }
+        }
     }
 
     public void DialogueEnd(Dialogue dialogue)

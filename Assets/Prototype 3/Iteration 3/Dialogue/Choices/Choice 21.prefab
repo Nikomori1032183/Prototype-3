@@ -241,7 +241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -254,7 +254,7 @@ PrefabInstance:
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5223507674756768853}
+      objectReference: {fileID: 5207633582972196922}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -269,7 +269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PickDialogue
+      value: ChoicePicked
       objectReference: {fileID: 0}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -277,7 +277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIButton, Assembly-CSharp
+      value: UIChoice, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -313,14 +313,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 824381709321958779, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
   m_PrefabInstance: {fileID: 3007949338938698262}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5223507674756768853 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
-  m_PrefabInstance: {fileID: 3007949338938698262}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90a9e9f305ea9de44984a58fdde7a7bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

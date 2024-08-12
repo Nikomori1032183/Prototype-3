@@ -1218,6 +1218,8 @@ MonoBehaviour:
   - {fileID: 423120539}
   - {fileID: 95659523}
   - {fileID: 1613299299}
+  goodEnd: {fileID: 11400000, guid: 0f05cb85b5798024a89ab6b03b39137e, type: 2}
+  badEnd: {fileID: 11400000, guid: 0ddbecda33d1f8543aa3853a067b4fa6, type: 2}
   backgroundTint: {r: 1, g: 0.50628924, b: 0.50628924, a: 1}
   textboxTint: {r: 0.64779866, g: 0.26278618, b: 0.26278618, a: 1}
   textTint: {r: 0.9245283, g: 0.3750444, b: 0.3750444, a: 1}

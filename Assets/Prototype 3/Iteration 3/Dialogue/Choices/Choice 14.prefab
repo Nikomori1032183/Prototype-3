@@ -495,16 +495,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1580461890230248110}
+      objectReference: {fileID: 5207633582972196922}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 5207633582972196922}
+      objectReference: {fileID: 1580461890230248110}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -515,19 +515,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PickDialogue
+      value: ChoiceTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ChoicePicked
+      value: OnButtonClickInfo
       objectReference: {fileID: 0}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIButton, Assembly-CSharp
+      value: UIChoice, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UIChoice, Assembly-CSharp
+      value: UIButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
+      propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7044686940236975683, guid: 904d8e15029e125438dfa4cf56546eae, type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
