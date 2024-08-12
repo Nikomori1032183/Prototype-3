@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39171af4b36c540abce362e2c29c2e, type: 3}
+  m_Name: Dialogue 16
+  m_EditorClassIdentifier: 
+  text: 'WHAT ARE YOU ALL LOOKING AT?
+
+    DONT THINK YOU CAN JUDGE ME.'
+  previousDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 1cbd27b496eb27c48bb800ab4925f124, type: 2}
+  choice: {fileID: 5207633582972196922, guid: 95de359fc77d39c469e75222340f0d0a, type: 3}

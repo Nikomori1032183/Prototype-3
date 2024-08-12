@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39171af4b36c540abce362e2c29c2e, type: 3}
+  m_Name: Dialogue 7
+  m_EditorClassIdentifier: 
+  text: "\u0127\u024F\u2C72 \u2C66\u2C73\uA74B\uA7A5 \u1D7E\u024F\uA74B \u0142\uA74B\u049F\uA74B
+    \u2C65\u2C66 ?\u1D6F\u0113"
+  previousDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: df900feb8b3cd844a8c18e6cbe82be6b, type: 2}
+  choice: {fileID: 5207633582972196922, guid: f2754f89446943043855338c1b8d89f9, type: 3}

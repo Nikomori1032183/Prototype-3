@@ -20,10 +20,10 @@ public class UITextbox : UIImage
         base.Start();
         textUI = GetComponentInChildren<UIText>();
         UIButton.onPickDialogue += LoadDialogue;
-        UpdateText();
+        //UpdateText();
     }
 
-    private void UpdateText()
+    public void UpdateText()
     {
         textUI.textComponent.text = "";
 
@@ -58,6 +58,12 @@ public class UITextbox : UIImage
         if (dialogue != null)
         {
             this.currentDialogue = dialogue;
+            UpdateText();
+        }
+
+        else
+        {
+            this.currentDialogue = currentDialogue.nextDialogue;
             UpdateText();
         }
     }

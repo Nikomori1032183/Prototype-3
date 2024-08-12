@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39171af4b36c540abce362e2c29c2e, type: 3}
+  m_Name: Dialogue 20
+  m_EditorClassIdentifier: 
+  text: "\u023B\u2C65\uA7A5 \u024F\uA74B\u1D7E \u024D\u0113\u2C65\u0142\u0142\u024F
+    \uA7A9\u2C65\u024F \u024F\uA74B\u1D7E \u2C65\u024D\u0113 \u0142\u012B\uA75F\u012B\uA7A5\uA7A1?"
+  previousDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 7b32bcb4839e88e48a2eb7aeae94a362, type: 2}
+  choice: {fileID: 5207633582972196922, guid: 5b5da2a8fc27f7b4899dce360baa9b8a, type: 3}

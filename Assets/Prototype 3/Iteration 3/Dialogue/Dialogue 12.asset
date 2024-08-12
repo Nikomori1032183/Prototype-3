@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39171af4b36c540abce362e2c29c2e, type: 3}
+  m_Name: Dialogue 12
+  m_EditorClassIdentifier: 
+  text: With still no clue how to get out of this place I stare hopelessly into the
+    void.
+  previousDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 827351959b0f753418709555d393f940, type: 2}
+  choice: {fileID: 5207633582972196922, guid: 902dc15310845c34bad61f66cf9824ab, type: 3}

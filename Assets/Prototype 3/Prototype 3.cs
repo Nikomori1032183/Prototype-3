@@ -33,6 +33,8 @@ public class Prototype3 : MonoBehaviour
     private void Awake()
     {
         current = this;
+        UIButton.onPickDialogue += DialogueStart;
+        UIChoice.onChoiceTrigger += ChoiceTrigger;
     }
 
     private void Start()
@@ -40,8 +42,13 @@ public class Prototype3 : MonoBehaviour
         AudioSource[] audioSources = GetComponents<AudioSource>();
         musicSource = audioSources[0];
         sfxSource = audioSources[1];
-        UIButton.onPickDialogue += DialogueStart;
-        UIChoice.onChoiceTrigger += ChoiceTrigger;
+
+        DelayedStartStart();
+    }
+
+    public void NextDialogue()
+    {
+ 
     }
 
     private void StopAudio(AudioSource source)
@@ -55,9 +62,6 @@ public class Prototype3 : MonoBehaviour
         source.clip = clip;
         source.Play();
     }
-
-    // show dialogue
-    // 
 
     public void ChoiceTrigger(string choiceName)
     {
@@ -183,6 +187,18 @@ public class Prototype3 : MonoBehaviour
         background.color = originalColors[0];
         textbox.image.color = originalColors[1];
         textbox.textUI.textComponent.color = originalColors[2];
+    }
+
+    [Button]
+    public void DelayedStartStart()
+    {
+        StartCoroutine(DelayedStart());
+    }
+
+    public IEnumerator DelayedStart()
+    {
+        yield return new WaitForSeconds(0.5f);
+        textbox.UpdateText();
     }
 
     [Button]
