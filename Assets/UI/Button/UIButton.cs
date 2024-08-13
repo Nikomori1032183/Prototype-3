@@ -19,6 +19,7 @@ public class UIButton : UIImage, IPointerDownHandler, IPointerUpHandler, IPointe
     [EndTab]
 
     public static event Action<Dialogue> onPickDialogue;
+    public static event Action onButtonClick;
     public static event Action<string> onButtonClickInfo;
 
     public void PickDialogue()
@@ -34,6 +35,7 @@ public class UIButton : UIImage, IPointerDownHandler, IPointerUpHandler, IPointe
 
     private void ButtonPress()
     {
+        onButtonClick.Invoke();
         buttonPress.Invoke();
     }
 

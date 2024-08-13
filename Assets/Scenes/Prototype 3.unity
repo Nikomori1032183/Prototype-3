@@ -1104,7 +1104,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6389f60c5e1e47a47810f5ce59b8c732, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1203,6 +1203,8 @@ MonoBehaviour:
   panicAttack: {fileID: 8300000, guid: 5024e194c399bdf429ce098662c50939, type: 3}
   eyeDrone: {fileID: 8300000, guid: cd386b9e6357cf649a6cb9ca1b82b81e, type: 3}
   wrongButtonPress: {fileID: 8300000, guid: 807c6b8eb5571794687de267bf2c2044, type: 3}
+  breathing: {fileID: 8300000, guid: 1efaa52c5730dcf49acb93665dd45c08, type: 3}
+  buttonPress: {fileID: 8300000, guid: cd5926ab2d5ccd1438aa6a7ca7b2ce85, type: 3}
   textbox: {fileID: 1572798178}
   button: {fileID: 0}
   choice: {fileID: 0}
@@ -1233,10 +1235,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.3
-  m_Pitch: 0.35
+  m_audioClip: {fileID: 8300000, guid: cd5926ab2d5ccd1438aa6a7ca7b2ce85, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.05
+  m_Pitch: 0.75
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -2092,7 +2094,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 41c059f65b3be60438d430681679d317, type: 2}
     - target: {fileID: 5489091418434464910, guid: 0d6c8823a301f3d429b763562a63a9a7, type: 3}
       propertyPath: scrollInterval
-      value: 0.01
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5489091418434464910, guid: 0d6c8823a301f3d429b763562a63a9a7, type: 3}
       propertyPath: currentDialogue

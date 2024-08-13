@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa39171af4b36c540abce362e2c29c2e, type: 3}
   m_Name: Dialogue 20B
   m_EditorClassIdentifier: 
-  text: Thankyou
+  text: Thankyou for being honest.
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 7b32bcb4839e88e48a2eb7aeae94a362, type: 2}
   choice: {fileID: 5207633582972196922, guid: 5b5da2a8fc27f7b4899dce360baa9b8a, type: 3}

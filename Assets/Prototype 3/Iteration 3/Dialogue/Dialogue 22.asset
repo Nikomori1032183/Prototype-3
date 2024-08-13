@@ -15,4 +15,4 @@ MonoBehaviour:
   text: It was that same nightmare again.
   previousDialogue: {fileID: 0}
   nextDialogue: {fileID: 0}
-  choice: {fileID: 5207633582972196922, guid: e5a2e8c3f8619924c989d012a47be90c, type: 3}
+  choice: {fileID: 0}

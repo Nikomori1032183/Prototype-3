@@ -19,6 +19,8 @@ public class Prototype3 : MonoBehaviour
     [SerializeField] AudioClip panicAttack;
     [SerializeField] AudioClip eyeDrone;
     [SerializeField] AudioClip wrongButtonPress;
+    [SerializeField] AudioClip breathing;
+    [SerializeField] AudioClip buttonPress;
 
     [SerializeField] UITextbox textbox;
     [SerializeField] UITextButton button;
@@ -46,6 +48,7 @@ public class Prototype3 : MonoBehaviour
         UIButton.onPickDialogue += DialogueStart;
         UIButton.onButtonClickInfo += PlayButtonSound;
         UIChoice.onChoiceTrigger += ChoiceTrigger;
+        UIButton.onButtonClick += ButtonPress;
     }
 
     private void Start()
@@ -63,7 +66,7 @@ public class Prototype3 : MonoBehaviour
         {
             case "1":
                 Debug.Log("Wrong Button Press");
-                PlayAudio(sfxSource, wrongButtonPress);
+                PlayAudio(sfxSource, wrongButtonPress, 0.75f, 0.05f);
                 break;
 
             case "2":
@@ -85,6 +88,10 @@ public class Prototype3 : MonoBehaviour
                 }
                 break;
 
+            //case "4":
+            //    Close();
+            //    break;
+
             default:
                 break;
         }
@@ -100,10 +107,24 @@ public class Prototype3 : MonoBehaviour
         source.Stop();
     }
 
+    public void ButtonPress()
+    {
+        PlayAudio(sfxSource, buttonPress, 0.9f, 0.1f);
+    }
+
     public void PlayAudio(AudioSource source, AudioClip clip)
     {
         source.Stop();
         source.clip = clip;
+        source.Play();
+    }
+
+    public void PlayAudio(AudioSource source, AudioClip clip, float pitch, float volume)
+    {
+        source.Stop();
+        source.clip = clip;
+        source.pitch = pitch;
+        source.volume = volume;
         source.Play();
     }
 
@@ -133,6 +154,8 @@ public class Prototype3 : MonoBehaviour
 
                 case "Dialogue 7":
                     eyes[1].SetActive(true);
+                    textbox.textUI.textComponent.color = textTint;
+
                     break;
 
                 case "Dialogue 8":
@@ -140,6 +163,7 @@ public class Prototype3 : MonoBehaviour
                     break;
 
                 case "Dialogue 10":
+                    textbox.textUI.textComponent.color = originalColors[2];
                     eyes[0].SetActive(false);
                     eyes[1].SetActive(false);
                     eyes[2].SetActive(false);
@@ -150,22 +174,52 @@ public class Prototype3 : MonoBehaviour
                     Tint();
                     StartEyes();
                     PlayAudio(musicSource, panicAttack);
+                    SetFontSize(48);
+                    SetScrollInterval(0.07f);
+                    break;
+
+                case "Dialogue 14":
+                    SetFontSize(32);
+                    SetScrollInterval(0.025f);
+                    break;
+
+                case "Dialogue 17B":
+                    textbox.textUI.textComponent.color = originalColors[2];
+                    break;
+
+                case "Dialogue 18":
+                    textbox.textUI.textComponent.color = textTint;
+                    break;
+
+                case "Dialogue 18B":
+                    textbox.textUI.textComponent.color = originalColors[2];
+                    break;
+
+                case "Dialogue 19":
+                    textbox.textUI.textComponent.color = textTint;
+                    break;
+
+                case "Dialogue 19B":
+                    textbox.textUI.textComponent.color = originalColors[2];
                     break;
 
                 case "Dialogue 20":
-                    StopEyes();
+                    textbox.textUI.textComponent.color = textTint;
                     break;
 
                 case "Dialogue 20B":
-                    UndoTint();
-                    StopEyes();
+                    textbox.textUI.textComponent.color = textTint;
                     break;
-                case "Dialogue 21":
-                    UndoTint();
+
+                case "Dialogue 21": 
                     StopAudio(musicSource);
+                    StopEyes();
+                    UndoTint();
+                    PlayAudio(sfxSource, breathing, 1, 0.05f);
                     break;
+
                 case "Dialogue 22":
-                    Close();
+                    StartCoroutine(Close());
                     break;
             }
         }
@@ -177,11 +231,17 @@ public class Prototype3 : MonoBehaviour
         {
             currentChoice = Instantiate(dialogue.choice, GameObject.FindWithTag("Canvas").transform);
         }
+
+        if (dialogue.name == "Dialogue 22")
+        {
+            Close();
+        }
     }
 
     private IEnumerator Close()
     {
         yield return new WaitForSeconds(3);
+        Debug.Log("Quit");
         Application.Quit();
     }
 
@@ -223,6 +283,9 @@ public class Prototype3 : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         textbox.UpdateText();
+        originalColors[0] = background.color;
+        originalColors[1] = textbox.image.color;
+        originalColors[2] = textbox.textUI.textComponent.color;
     }
 
     [Button]

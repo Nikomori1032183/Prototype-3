@@ -29,15 +29,19 @@ public class UITextbox : UIImage
 
         Prototype3.current.DialogueStart(currentDialogue);
 
-        if (scroll)
-        {
-            StartCoroutine(ScrollingText(currentDialogue.text));
-        }
 
-        else
+        if (currentDialogue != null)
         {
-            textUI.textComponent.text = currentDialogue.text;
-            Prototype3.current.DialogueEnd(currentDialogue);
+            if (scroll)
+            {
+                StartCoroutine(ScrollingText(currentDialogue.text));
+            }
+
+            else
+            {
+                textUI.textComponent.text = currentDialogue.text;
+                Prototype3.current.DialogueEnd(currentDialogue);
+            }
         }
     }
 
